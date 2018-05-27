@@ -1,0 +1,35 @@
+header {
+  background: black;
+  color: white;
+  display: flex;
+  height: $header-height;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+header img {
+  width: 2.5em;
+  margin-left: 5vw;
+}
+
+header a {
+  border: none;
+  display: block;
+}
+
+// Invert Colours on scroll
+// via a class added by jquery
+header.invert {
+
+  background: white;
+  color: black;
+
+  img {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+  }
+
+}

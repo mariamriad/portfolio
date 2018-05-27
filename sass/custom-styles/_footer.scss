@@ -1,0 +1,58 @@
+.scrollToTop{
+    position: fixed;
+    right: 4vw;
+    bottom: 30px;
+    padding: 10px;
+    display: none;
+    border-bottom: none;
+    background-color: white;
+}
+
+footer {
+    padding-top: 5vw;
+    margin: 0 5vw;
+    border-top: 1px solid black;
+}
+
+.mariam {
+  font-weight: 600;
+  max-width: 500px;
+  min-width: 100px;
+}
+
+footer h2 {
+  font-size: 1.7em;
+  line-height: 0.5em;
+}
+
+.email {
+  margin: 8vh 0;
+}
+
+.email a {
+  font-size: 1.7em;
+  font-weight: 600;
+}
+
+.social ul {
+  float: right;
+  display: flex;
+  list-style: none;
+}
+
+.social a {
+  padding-left: 1vh;
+  font-size: 1.5rem;
+  border: none;
+  color: black;
+}
+
+.social a:hover, a:focus, a:active {
+  color: $hover-gray;
+}
+
+.made {
+  font-size: 0.9em;
+  line-height: 0.5em;
+  margin-bottom: 5vh;
+}

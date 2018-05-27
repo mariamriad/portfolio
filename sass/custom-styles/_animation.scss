@@ -1,0 +1,65 @@
+/* animation styles */
+
+.tagline {
+  opacity: 0;
+  animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+}
+
+.start {
+  animation-delay: 0;
+}
+
+.middle {
+  animation-delay: 1s;
+}
+
+// .finish {
+//   -webkit-animation-delay: 1s;
+//      -moz-animation-delay: 1s;
+//        -o-animation-delay: 1s;
+//           animation-delay: 1s;
+// }
+
+@-webkit-keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-moz-keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-o-keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

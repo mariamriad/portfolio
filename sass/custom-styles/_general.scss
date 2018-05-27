@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+/* resets */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, p {
+  margin-top: 0;
+}
+
+/* screen readers/accessibility */
+.sr-only {
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+overflow: hidden;
+clip: rect(0, 0, 0, 0);
+border: 0;
+}
+
+/* variables */
+$hot-pink: #F502B4;
+$hover-gray: #999;
+
+// layout variables
+$header-height: 60px;

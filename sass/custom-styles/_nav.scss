@@ -1,0 +1,30 @@
+/* nav styles */
+
+#navbar {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  // padding-left: 2em;
+  padding-right: 2em;
+  border: none;
+
+  .invert & {
+    color: black;
+  }
+
+}
+
+nav a:hover, a:focus, a:active {
+  color: $hover-gray;
+}
