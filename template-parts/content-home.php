@@ -35,18 +35,22 @@
 	</div>
 </section>
 <section class="container" id="portfolio">
-	<div class="filters">
+	<!-- <div class="filters button-group sort-by-button-group">
 		<ul>
-			<a href="#"><li>All</li></a>
-			<a href="#"><li>Web Development</li></a>
-			<a href="#"><li>Design</li></a>
-			<a href="#"><li>WordPress</li></a>
-			<a href="#"><li>UX</li></a>
-			<a href="#"><li>Information Architecture</li></a>
-			<a href="#"><li>Branding</li></a>
+			<a href="" data-sort-by="original-order"><li>All</li></a>
+			<a href="" data-sort-by="web-dev"><li>Web Development</li></a>
+			<a href="" data-sort-by="design"><li>Design</li></a>
+			<a href="" data-sort-by="wordpress"><li>WordPress</li></a>
+			<a href="" data-sort-by="ux"><li>User Experience (UX)</li></a>
+			<a href="" data-sort-by="ia"><li>Information Architecture</li></a>
+			<a href="" data-sort-by="branding"><li>Branding</li></a>
 		</ul>
+	</div> -->
+	<div id="filters" class="filters button-group">
+		<button class="button is-checked" data-filter="*">All</button>
+	  <button class="button" data-filter=".web-dev">Web Development</button>
 	</div>
-<div class="portfolio">
+	<div class="portfolio" id="isotope-list" data-isotope='{ "itemSelector": ".box", "layoutMode": "fitRows" }'>
 		<div class="row">
 			<a href="#0" class="box">
 					<picture>
@@ -61,7 +65,7 @@
 						</div><!-- content-text -->
 					</div><!-- content -->
 			</a>
-			<a href="#0" class="box">
+			<a href="#0" class="box web-dev">
 					<img src="/portfolio/wp-content/themes/portfolio/assets/portfolio-rectangle.png" alt="">
 					<div class="content">
 						<div class="overlay"></div>

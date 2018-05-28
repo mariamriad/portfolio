@@ -1,7 +1,7 @@
 .scrollToTop{
     position: fixed;
     right: 4vw;
-    bottom: 30px;
+    bottom: 60px;
     padding: 10px;
     display: none;
     border-bottom: none;
@@ -10,27 +10,27 @@
 
 footer {
     padding-top: 5vw;
-    margin: 0 5vw;
+    margin: 5vw;
     border-top: 1px solid black;
 }
 
-.mariam {
-  font-weight: 600;
-  max-width: 500px;
-  min-width: 100px;
-}
+// .mariam {
+//   font-weight: 600;
+//   max-width: 500px;
+//   min-width: 100px;
+// }
 
 footer h2 {
-  font-size: 1.7em;
+  font-size: 1em;
   line-height: 0.5em;
 }
 
 .email {
-  margin: 8vh 0;
+  margin-bottom: 8vh;
 }
 
 .email a {
-  font-size: 1.7em;
+  font-size: 1em;
   font-weight: 600;
 }
 
@@ -38,6 +38,7 @@ footer h2 {
   float: right;
   display: flex;
   list-style: none;
+  margin: 0;
 }
 
 .social a {
@@ -55,4 +56,21 @@ footer h2 {
   font-size: 0.9em;
   line-height: 0.5em;
   margin-bottom: 5vh;
+}
+
+@media only screen and (min-width: 700px) {
+  footer {
+    padding-top:
+  }
+  footer h2 {
+    font-size: 1.7rem;
+  }
+
+  .email a {
+    font-size: 1.7em;
+  }
+
+  .social a {
+    font-size: 2rem;
+  }
 }

@@ -135,6 +135,9 @@ function portfolio_scripts() {
 	// Navbar
 	wp_enqueue_script('portfolio-navbarjs', get_template_directory_uri() . '/js/navbar.js', array('jquery'), '20180527', true);
 
+	// Isotope Filters
+	wp_enqueue_script('portfolio-isotope', get_template_directory_uri() . '/js/isotope.js', array('jquery'), '20180527', true);
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
