@@ -19,9 +19,13 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	<header>
 	<div class="background-landing">
+	<header>
 		<div id="navbar">
+			<div class="heading">
+				<img src="/portfolio/wp-content/themes/portfolio/assets/mariamriad-logo.svg" alt="heart logo" class="logo">
+				<h2>Mariam Riad</h2>
+			</div>
 			<nav>
 				<?php
 				wp_nav_menu( array(

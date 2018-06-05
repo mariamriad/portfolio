@@ -3,6 +3,16 @@
 #navbar {
   display: flex;
   align-items: center;
+  width: 100%;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+
+  h2, img {
+    margin: 0;
+  }
 }
 
 nav ul {
@@ -12,15 +22,15 @@ nav ul {
 }
 
 nav a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: bold;
   padding-right: 2em;
   border: none;
 
-  .invert & {
-    color: black;
-  }
+  // .invert & {
+  //   color: black;
+  // }
 
 }
 
