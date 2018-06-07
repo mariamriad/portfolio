@@ -6,7 +6,7 @@ main {
 .landing {
   // background: black;
   // color: white;
-  min-height: calc(100vh - #{$header-height});
+  // min-height: calc(100vh - #{$header-height});
   padding: 0 5vw 6vw;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@ main {
 }
 
 .landing p {
-  font-size: 1.1em;
+  // font-size: 1.1em;
   max-width: 500px;
   font-weight: 500;
 }
@@ -58,7 +58,7 @@ main {
   }
 
   25% {
-    fill: $hot-pink;
+    fill: $brand-color;
   }
 
   50% {
@@ -82,7 +82,7 @@ main {
 .button {
   border: none;
   color: white;
-  background-color: $hot-pink;
+  background-color: $brand-color;
   padding: 0.8em 3em;
   border-radius: 13px;
   font-weight: 600;

@@ -10,7 +10,7 @@
 ?>
 
 <section class="landing">
-	<h1>Mariam Riad &mdash;</h1>
+	<h1>Mariam Riad</h1>
 	<p>Front-end web developer, designer, and digital content creator with a passion for asthetics and delighting the end user.</p>
 	<div class="tagline">
 		<span><h2 class="tagline start">Design that you'll</h2></span>
@@ -31,7 +31,7 @@
 	</div>
 	<div class="bottom-landing-section">
 		<a href="#portfolio" class="button">View Portfolio</a>
-		<div class="arrow down"><i class="fas fa-arrow-down fa-2x"></i></div>
+		<!-- <div class="arrow down"><i class="fas fa-arrow-down fa-2x"></i></div> -->
 	</div>
 </section>
 </div><!--background-landing-->
@@ -47,112 +47,67 @@
 			<a href="" data-sort-by="branding"><li>Branding</li></a>
 		</ul>
 	</div> -->
+
 	<ul id="filters">
-    <li><a href="#" data-filter="*" class="selected">All</a></li>
-		<?php
-			$terms = get_terms("category"); // get all categories, but you can use any taxonomy
-			$count = count($terms); //How many are they?
-			if ( $count > 0 ){  //If there are more than 0 terms
-				foreach ( $terms as $term ) {  //for each term:
-					echo "<li><a href='#' data-filter='.".$term->slug."'>" . $term->name . "</a></li>\n";
-					//create a list item with the current term slug for sorting, and name for label
-				}
-			}
-		?>
+			<li><a href="javascript:void(0)" data-filter="*" class="selected">All</a></li>
+			<?php
+					$terms = get_terms('project-category');
+					$count = count($terms); //How many are they?
+					if ( $count > 0 ){  //If there are more than 0 terms
+							foreach ( $terms as $term ) {  //for each term:
+									echo "<li><a href='javascript:void(0)' data-filter='.".$term->slug."'>" . $term->name . "</a></li>\n";
+							}
+					}
+			?>
 	</ul>
-	<?php $the_query = new WP_Query( 'posts_per_page=50' ); //Check the WP_Query docs to see how you can limit which posts to display ?>
-	<?php if ( $the_query->have_posts() ) : ?>
-	    <div id="isotope-list">
-	    <?php while ( $the_query->have_posts() ) : $the_query->the_post();
-	$termsArray = get_the_terms( $post->ID, "category" );  //Get the terms for this particular item
-	$termsString = ""; //initialize the string that will contain the terms
-	foreach ( $termsArray as $term ) { // for each term
-	$termsString .= $term->slug.' '; //create a string that has all the slugs
-	}
-	?>
-	<div class="<?php echo $termsString; ?> item"> <?php // 'item' is used as an identifier (see Setp 5, line 6) ?>
-	<h3><?php the_title(); ?></h3>
-	        <?php if ( has_post_thumbnail() ) {
-	                      the_post_thumbnail();
-	                } ?>
-	</div> <!-- end item -->
-	    <?php endwhile;  ?>
-	    </div> <!-- end isotope-list -->
+
+	<?php
+    $args = array(
+        'post_type'=> 'project',
+        'posts_per_page' => -1,
+    );
+
+    $projects = new WP_Query($args);?>
+
+    <?php if ( $projects->have_posts() ) : ?>
+        <div class="portfolio" id="isotope-list">
+
+				<?php $counter = 0; ?>
+        <?php while ( $projects->have_posts() ) {
+                $projects->the_post();
+								$counter++;
+
+								if($counter == 1){
+									echo "<div class='row'>";
+								}elseif($counter % 4 == 0){
+									echo "</div><div class='row'>";
+								}
+
+                    $termList = get_the_terms( $post->ID, 'project-category' );  //Get the assigned terms for a particular item
+                    $termName = ""; //initialize the string that will contain the terms
+										if ($termList && ! is_wp_error($termList)){
+                        foreach ( $termList as $term ) { // for each term
+                            $termName .= $term->slug.' '; //create a string that has all the slugs
+                        }
+										}
+        ?>
+
+				<a href="#0" class="box item <?php echo $termName?>">
+						<?php the_post_thumbnail('medium'); ?>
+						<div class="content">
+							<div class="overlay"></div>
+							<div class="content-text">
+								<p><?php category_description(); ?></p>
+								<h2><?php the_title(); ?></h2>
+							</div><!-- content-text -->
+						</div><!-- content -->
+				</a>
+
+        <?php }  ?>
+				</div> <!-- end row div -->
+        </div> <!-- end item-list -->
 	<?php endif; ?>
-	<!-- <div id="filters" class="filters button-group">
-		<button class="button is-checked" data-filter="*">All</button>
-	  <button class="button" data-filter=".web-dev">Web Development</button>
-	</div> -->
-	<div class="portfolio" id="isotope-list" data-isotope='{ "itemSelector": ".box", "layoutMode": "fitRows" }'>
-		<div class="row">
-			<a href="#0" class="box">
-					<picture>
-						<source media="(max-width: 799px)" srcset="/portfolio/wp-content/themes/portfolio/assets/portfolio-rectangle.png">
-						<img src="/portfolio/wp-content/themes/portfolio/assets/portfolio-square.png" alt="">
-					</picture>
-					<div class="content">
-						<div class="overlay"></div>
-						<div class="content-text">
-							<p>Custom WordPress Site Development</p>
-							<h2>Early Bird Family Farm.</h2>
-						</div><!-- content-text -->
-					</div><!-- content -->
-			</a>
-			<a href="#0" class="box web-dev">
-					<img src="/portfolio/wp-content/themes/portfolio/assets/portfolio-rectangle.png" alt="">
-					<div class="content">
-						<div class="overlay"></div>
-						<div class="content-text">
-							<p>Custom WordPress Site Development</p>
-							<h2>Early Bird Family Farm.</h2>
-						</div><!-- content-text -->
-					</div><!-- content -->
-			</a>
-			<a href="#0" class="box">
-					<img src="/portfolio/wp-content/themes/portfolio/assets/portfolio-rectangle.png" alt="">
-					<div class="content">
-						<div class="overlay"></div>
-						<div class="content-text">
-							<p>Custom WordPress Site Development</p>
-							<h2>Early Bird Family Farm.</h2>
-						</div><!-- content-text -->
-					</div><!-- content -->
-			</a>
-		</div><!-- row -->
-		<div class="row">
-			<a href="#0" class="box">
-					<picture>
-						<source media="(max-width: 799px)" srcset="/portfolio/wp-content/themes/portfolio/assets/portfolio-rectangle.png">
-						<img src="/portfolio/wp-content/themes/portfolio/assets/portfolio-square.png" alt="">
-					</picture>
-					<div class="content">
-						<div class="overlay"></div>
-						<div class="content-text">
-							<p>Custom WordPress Site Development</p>
-							<h2>Early Bird Family Farm.</h2>
-						</div><!-- content-text -->
-					</div><!-- content -->
-			</a>
-			<a href="#0" class="box">
-					<img src="/portfolio/wp-content/themes/portfolio/assets/portfolio-rectangle.png" alt="">
-					<div class="content">
-						<div class="overlay"></div>
-						<div class="content-text">
-							<p>Custom WordPress Site Development</p>
-							<h2>Early Bird Family Farm.</h2>
-						</div><!-- content-text -->
-					</div><!-- content -->
-			</a>
-			<a href="#0" class="box">
-					<img src="/portfolio/wp-content/themes/portfolio/assets/portfolio-rectangle.png" alt="">
-					<div class="content">
-						<div class="overlay"></div>
-						<div class="content-text">
-							<p>Custom WordPress Site Development</p>
-							<h2>Early Bird Family Farm.</h2>
-						</div><!-- content-text -->
-					</div><!-- content -->
-			</a>
-		</div><!-- row -->
+
+
 </section>
 <a href="#" class="scrollToTop"><i class="fas fa-arrow-up fa-2x"></i></a>

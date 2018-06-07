@@ -63,11 +63,11 @@ a:hover.filters {
     grid-row: 1;
   }
 
-  .row {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    margin-bottom: 2rem;
-  }
+  // .row {
+  //   display: grid;
+  //   grid-template-rows: 1fr 1fr;
+  //   margin-bottom: 2rem;
+  // }
 
   // grid overlay styles
   .box {
@@ -80,15 +80,17 @@ a:hover.filters {
 
   .box img {
     display: block;
-    position: absolute;
+    // position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    height: 200px;
     object-fit: cover;
   }
 
   .content {
+    width: 100%;
+    height: 100%;
     opacity: 0;
     transition: opacity 0.4s ease-in-out 0.1s;
   }
@@ -98,7 +100,7 @@ a:hover.filters {
   }
 
   .overlay {
-    background: rgba(0,0,0,0);
+    background: rgba(255,255,255,0.9);
     position: absolute;
     height: 100%;
     width: 100%;

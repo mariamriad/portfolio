@@ -47,6 +47,5 @@
 	</footer>
 <?php wp_footer(); ?>
 
-<script src="/path/to/isotope.pkgd.js"></script>
 </body>
 </html>
