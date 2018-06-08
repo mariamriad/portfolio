@@ -24,7 +24,7 @@
 		<div id="navbar">
 			<div class="heading">
 				<img src="/portfolio/wp-content/themes/portfolio/assets/mariamriad-logo.svg" alt="heart logo" class="logo">
-				<!-- <h2>Mariam Riad</h2> -->
+				<h2 class="heading-name">Mariam Riad</h2>
 			</div>
 			<nav>
 				<?php

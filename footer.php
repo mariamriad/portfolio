@@ -10,6 +10,7 @@
  */
 
 ?>
+	<a href="#" class="scrollToTop"><i class="fas fa-arrow-up"></i></a>
 
 	<footer>
 	  <!-- <article class="mariam">

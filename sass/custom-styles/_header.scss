@@ -5,7 +5,7 @@
 header {
   // background: black;
   // color: white;
-  background: white;
+  background: #F1F1EF;
   display: flex;
   height: $header-height;
   width: 100%;
@@ -24,9 +24,22 @@ header img {
   filter: invert(1);
 }
 
+.heading-name {
+  text-transform: lowercase;
+  font-weight: 500;
+  padding-left: 1rem;
+  margin: 0;
+}
+
 header a {
   border: none;
   // display: block;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
 }
 
 // Invert Colours on scroll
