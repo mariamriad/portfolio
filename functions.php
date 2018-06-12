@@ -284,3 +284,9 @@ function portfolio_register_taxonomies() {
     flush_rewrite_rules();
 }
 add_action( 'after_switch_theme', 'portfolio_rewrite_flush' );
+
+// function portfolio_disable_srcset( $sources ) {
+//     return false;
+// }
+//
+// add_filter( 'wp_calculate_image_srcset', 'portfolio_disable_srcset' );

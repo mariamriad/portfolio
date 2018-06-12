@@ -22,10 +22,10 @@
 	<div class="background-landing">
 	<header>
 		<div id="navbar">
-			<div class="heading">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="heading">
 				<img src="/portfolio/wp-content/themes/portfolio/assets/mariamriad-logo.svg" alt="heart logo" class="logo">
 				<h2 class="heading-name">Mariam Riad</h2>
-			</div>
+			</a>
 			<nav>
 				<?php
 				wp_nav_menu( array(

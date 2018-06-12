@@ -11,7 +11,6 @@ nav ul {
   list-style: none;
   display: flex;
   margin-bottom: 0;
-  // padding: 0;
 }
 
 nav a {
@@ -20,14 +19,19 @@ nav a {
   font-size: 0.8rem;
   font-weight: 400;
   text-transform: uppercase;
-  padding-left: 2.5rem;
+  padding-left: 1rem;
   border: none;
   transition: 0.4s ease-out;
 
   // .invert & {
   //   color: black;
   // }
+}
 
+@media only screen and (min-width: 800px) {
+  nav a {
+    padding-left: 2.5rem;
+  }
 }
 
 nav a:hover, a:focus, a:active {

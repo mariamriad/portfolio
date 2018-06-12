@@ -1,11 +1,5 @@
-// .background-landing {
-//   background-color: black;
-// }
-
 header {
-  // background: black;
-  // color: white;
-  background: #F1F1EF;
+  background: $background-gray;
   display: flex;
   height: $header-height;
   width: 100%;
@@ -14,12 +8,16 @@ header {
   left: 0;
   z-index: 999;
   justify-content: flex-end;
-  // margin: 0 5vw;
-  padding: 0 5vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .heading-name {
+    display: none;
+  }
 }
 
 header img {
-  width: 2.5em;
+  min-width: 2.5em;
   webkit-filter: invert(1);
   filter: invert(1);
 }
@@ -33,7 +31,6 @@ header img {
 
 header a {
   border: none;
-  // display: block;
 }
 
 .heading {

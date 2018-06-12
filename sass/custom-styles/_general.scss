@@ -13,6 +13,34 @@ img {
   height: auto;
 }
 
+#page {
+  max-width: 1920px;
+}
+
+header, main, footer, .container {
+	padding: 0 1.5rem;
+}
+
+@media only screen and (min-width: 800px) {
+	header, main, footer, .container {
+		padding: 0 4rem;
+	}
+}
+
+@media only screen and (min-width: 1600px) {
+	header, main, footer, .container {
+		padding: 0 15rem;
+	}
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
 h1, h2, h3, p, ul {
   margin-top: 0;
 }
@@ -34,9 +62,10 @@ border: 0;
 }
 
 /* variables */
-// $brand-color: #F502B4;
+$pink: #f1576e;
 $brand-color: #1bcfe0;
 $hover-gray: #999;
+$background-gray: #F1F1EF;
 
 // layout variables
 $header-height: 60px;

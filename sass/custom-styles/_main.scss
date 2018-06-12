@@ -4,44 +4,24 @@ main {
 }
 
 .landing {
-  // background: black;
-  // color: white;
-  // min-height: calc(100vh - #{$header-height});
-  padding: 0 5vw 6vw;
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
 .landing h1 {
-  // padding-top: 2.5em;
   margin-bottom: 0.4em;
   font-weight: 600;
 }
 
 .landing p {
-  // font-size: 1.1em;
   max-width: 500px;
   font-weight: 500;
   margin: 0 auto;
 }
 
 /* tagline styles */
-.tagline {
-  // display: flex;
-}
-
-// .start {
-//   font-size: 1.4em;
-//   padding: 6vw 3vw 0 0;
-// }
-
-// @media only screen and (min-width: 850px) {
-//   .start {
-//     padding: 2vw 1vw 0 0;
-//   }
-// }
-
 .heart-logo {
   width: 100px;
   height: auto;
@@ -49,28 +29,27 @@ main {
 }
 
 .half-heart {
-  fill: lime;
+  fill: #3adb40;
   animation: cycleColour 6s infinite both;
 }
 
 @keyframes cycleColour {
 
-  0% {
-    fill: white;
-  }
+  // 0% {
+  //   fill: white;
+  // }
 
   25% {
     fill: $brand-color;
   }
 
   50% {
-    fill: aqua;
+    fill: $pink;
   }
 
   75% {
-    fill: yellow;
+    fill: #F5C240;
   }
-
 }
 
 // Bottom Landing section

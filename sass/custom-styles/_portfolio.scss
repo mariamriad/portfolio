@@ -1,29 +1,23 @@
 /* portfolio styles */
 .container {
-  padding: 5vw;
+  margin: 2.5rem 0;
 }
 
+/* general box styles */
 .box {
   border-bottom: none;
-  max-width: 600px;
-  margin: 0 1.2rem 2rem 1.2rem;
-}
+  width: 100%;
+  padding: 0.9rem 0;
 
-@media only screen and (min-width: 1100px) {
-  // .box {
-  //   // max-width: 310px;
-  // }
-  .box img {
+  img {
     width: 100%;
   }
 }
 
-@media only screen and (min-width: 1245px) {
-  // .box {
-    // max-width: 360px;
-  // }
-  .box img {
-    width: 90%;
+@media only screen and (min-width: 1100px) {
+  .box {
+    width: 50%;
+    padding: 0.9rem 1.1rem;
   }
 }
 
@@ -33,11 +27,13 @@
   border-bottom: none;
 }
 
+/* box text styles */
 .box {
   h2 {
     font-size: 1.5em;
     margin-bottom: 8vh;
     color: black;
+    font-weight: 600;
   }
   p {
     font-size: 0.85em;
@@ -56,12 +52,21 @@
 
 .filters li {
   list-style: none;
-  padding-left: 1rem;
+  min-width: 320px;
+}
+
+@media only screen and (min-width: 925px) {
+  .filters {
+        padding-top: 0.5rem;
+  }
+
+  li {
+    padding-left: 0.5rem;
+  }
 }
 
 .filters a {
   color: black;
-  // font-weight: bold;
   text-transform: uppercase;
   font-size: 0.7rem;
   line-height: 2rem;
@@ -78,13 +83,11 @@ a:hover.filters {
 }
 
 /* grid styles */
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 925px) {
   // filters / container grid
   .container {
-    // padding: 8vw 5vw;
     display: grid;
-    grid-template-columns: 28% 1fr;
-    // grid-gap: 2rem;
+    grid-template-columns: 30% 1fr;
   }
 
   .filters {
@@ -92,31 +95,16 @@ a:hover.filters {
     grid-row: 1;
   }
 
-  // .portfolio {
-  //   display: grid;
-  //   grid-template-rows: repeat (2, 1fr);
-  //   // grid-gap: 2rem;
-  //   // margin-bottom: 2rem;
-  // }
-
   // grid overlay styles
   .box {
-    // display: block;
     text-decoration: none;
-    // color: white;
-    // position: relative;
     overflow: hidden;
   }
 
   .box img {
-    // display: block;
-    // position: absolute;
     top: 0;
     left: 0;
-    // width: 100%;
-    // height: 200px;
     object-fit: cover;
-    width: 80%;
   }
 
   .content {
@@ -145,7 +133,6 @@ a:hover.filters {
     position: absolute;
     bottom: 0;
     left: 0;
-    // color: white;
     padding: 16px 16px 0 16px;
     padding-left: 1.2em;
     transform: translateY(100%);
@@ -153,13 +140,12 @@ a:hover.filters {
   }
 
   .content-text h2 {
-    // color: #fff;
-    font-weight: 500;
     margin-bottom: 0.8em;
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .content-text p {
-    // color: #fff;
     font-size: 0.8em;
     line-height: 1.5em;
   }
@@ -168,70 +154,4 @@ a:hover.filters {
   .box:focus .content-text {
     transform: translateY(0);
   }
-
-  /* Odd Portfolio Section Styles */
-//   .row:nth-of-type(odd) {
-//     display: grid;
-//     grid-template-columns: 1.32fr 1fr;
-//   }
-//
-//   .row:nth-of-type(odd) .box:nth-of-type(1) {
-//     grid-column: 1 / 2;
-//     grid-row: 1 / 3;
-//     margin-right: 1rem;
-//   }
-//
-//   .row:nth-of-type(odd) .box:nth-of-type(1):before {
-//     content: "";
-//     display: inline-block;
-//     width: 1px;
-//     height: 0;
-//     padding-bottom: calc(100% / (1 / 1));
-//   }
-//
-//   .row:nth-of-type(odd) .box:nth-of-type(2) {
-//     margin-bottom: 1rem;
-//   }
-//
-//   .row:nth-of-type(odd) .box:nth-of-type(3) {
-//     margin-top: 1rem;
-//   }
-//
-//   .row:nth-of-type(odd) .box:nth-of-type(2),
-//   .row:nth-of-type(odd) .box:nth-of-type(3) {
-//     margin-left: 1rem;
-//   }
-//
-//   /* Even Portfolio Section Styles */
-//   .row:nth-of-type(even) {
-//     display: grid;
-//     grid-template-columns: 1fr 1.32fr;
-//   }
-//
-//   .row:nth-of-type(even) .box:nth-of-type(1) {
-//     grid-column: 2 / 3;
-//     grid-row: 1 / 3;
-//     margin-left: 1rem;
-//   }
-//
-//   .row:nth-of-type(even) .box:nth-of-type(1):before {
-//     content: "";
-//     display: inline-block;
-//     width: 1px;
-//     height: 0;
-//     padding-bottom: calc(100% / (1 / 1));
-//   }
-//
-//   .row:nth-of-type(even) .box:nth-of-type(2) {
-//     margin-bottom: 1rem;
-//   }
-//
-//   .row:nth-of-type(even) .box:nth-of-type(3) {
-//     margin-top: 1rem;
-//   }
-//
-//   .row:nth-of-type(even) .box:nth-of-type(2),
-//   .row:nth-of-type(even) .box:nth-of-type(3) {
-//     margin-right: 1rem;
-//   }
 }

@@ -10,15 +10,12 @@
 }
 
 .middle {
-  animation-delay: 1s;
+  animation-delay: 800ms;
 }
 
-// .finish {
-//   -webkit-animation-delay: 1s;
-//      -moz-animation-delay: 1s;
-//        -o-animation-delay: 1s;
-//           animation-delay: 1s;
-// }
+.finish {
+  animation-delay: 1600ms;
+}
 
 @-webkit-keyframes reveal {
   0% {

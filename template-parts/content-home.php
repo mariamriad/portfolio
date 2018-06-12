@@ -11,7 +11,7 @@
 
 <section class="landing">
 	<span>
-		<svg class="heart-logo tagline middle" x="0px" y="0px" viewBox="0 0 304 232.8" style="enable-background:new 0 0 304 232.8;">
+		<svg class="heart-logo tagline start" x="0px" y="0px" viewBox="0 0 304 232.8" style="enable-background:new 0 0 304 232.8;">
 		<style type="text/css">
 			.st0{/*fill:#FFFFFF;*//*stroke:#FFFFFF;*/stroke-miterlimit:10;}
 			.st1{/*stroke:#FFFFFF;*/stroke-miterlimit:10;}
@@ -24,30 +24,19 @@
 		</g>
 		</svg>
 	</span>
-	<h1>Hello there,</h1>
-	<p>I'm Mariam: a front-end web developer, designer, and digital content creator with a love for asthetics and delighting the end user.</p>
+	<div class="tagline middle">
+		<h1>Hello there,</h1>
+		<p>I'm Mariam: a front-end web developer, designer, and digital content creator with a love for asthetics and delighting the end user.</p>
+	</div>
 <br>
 	<div class="tagline">
-		<span><a href="./contact" class="tagline start">Get in touch</a></span>
+		<span><a href="./contact" class="tagline finish">Get in touch</a></span>
 	</div>
 	<div class="bottom-landing-section">
-		<!-- <a href="#portfolio" class="button">View Portfolio</a> -->
-		<!-- <div class="arrow down"><i class="fas fa-arrow-down fa-2x"></i></div> -->
 	</div>
 </section>
 </div><!--background-landing-->
 <section class="container" id="portfolio">
-	<!-- <div class="filters button-group sort-by-button-group">
-		<ul>
-			<a href="" data-sort-by="original-order"><li>All</li></a>
-			<a href="" data-sort-by="web-dev"><li>Web Development</li></a>
-			<a href="" data-sort-by="design"><li>Design</li></a>
-			<a href="" data-sort-by="wordpress"><li>WordPress</li></a>
-			<a href="" data-sort-by="ux"><li>User Experience (UX)</li></a>
-			<a href="" data-sort-by="ia"><li>Information Architecture</li></a>
-			<a href="" data-sort-by="branding"><li>Branding</li></a>
-		</ul>
-	</div> -->
 
 	<ul id="filters" class="filters">
 			<li><a href="javascript:void(0)" data-filter="*" class="selected">All</a></li>
