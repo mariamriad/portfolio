@@ -13,8 +13,13 @@ img {
   height: auto;
 }
 
-#page {
+body {
   max-width: 1920px;
+}
+
+.content-area {
+  margin-top: 10rem;
+	min-height: 60vh;
 }
 
 header, main, footer, .container {

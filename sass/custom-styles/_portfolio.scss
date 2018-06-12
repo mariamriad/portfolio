@@ -1,7 +1,16 @@
 /* portfolio styles */
 .container {
-  margin: 2.5rem 0;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  // margin: 2.5rem 0;
 }
+
+// a.container {
+//     display: block;
+//     position: relative;
+//     top: -500px;
+//     visibility: hidden;
+// }
 
 /* general box styles */
 .box {
@@ -136,18 +145,19 @@ a:hover.filters {
     padding: 16px 16px 0 16px;
     padding-left: 1.2em;
     transform: translateY(100%);
-    transition: all 0.3s ease-in-out 0.2s;
+    transition: all 0.3s ease-in-out 0.3s;
   }
 
   .content-text h2 {
-    margin-bottom: 0.8em;
-    padding-left: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 0.7rem;
     padding-bottom: 0.5rem;
   }
 
   .content-text p {
+    padding-left: 0.7rem;
     font-size: 0.8em;
-    line-height: 1.5em;
+    line-height: 1.5rem;
   }
 
   .box:hover .content-text,

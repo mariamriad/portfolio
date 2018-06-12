@@ -10,11 +10,21 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<!-- <header class="entry-header"> -->
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	<!-- </header> -->
 
+	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	<?php portfolio_post_thumbnail(); ?>
+	<?php
+		 if(function_exists('get_field')) {
+
+			 echo "<p>";
+			 the_field('full_project_description');
+			 echo "</p>";
+
+			 echo "<a class='cta-button' href='";
+			 the_field('project_link');
+			 echo "'>Visit Live Site</a>";
+		 }
+	?>
 
 	<div class="entry-content">
 		<?php
@@ -28,7 +38,7 @@
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
+		<div class="entry-footer">
 			<?php
 			edit_post_link(
 				sprintf(
@@ -47,6 +57,6 @@
 				'</span>'
 			);
 			?>
-		</footer><!-- .entry-footer -->
+		</div><!-- .entry-footer -->
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -116,6 +116,14 @@ template { display: none; }
 /** Add the correct display in IE 10. */
 [hidden] { display: none; }
 
+/* Text meant only for screen readers. */
+.screen-reader-text { border: 0; clip: rect(1px, 1px, 1px, 1px); -webkit-clip-path: inset(50%); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute !important; width: 1px; word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */ }
+
+.screen-reader-text:focus { background-color: white; border-radius: 3px; -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); clip: auto !important; -webkit-clip-path: none; clip-path: none; color: #4959ac; display: block; font-weight: bold; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; /* Above WP toolbar. */ }
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus { outline: 0; }
+
 /* resets */
 html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
@@ -123,7 +131,9 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 img { max-width: 100%; height: auto; }
 
-#page { max-width: 1920px; }
+body { max-width: 1920px; }
+
+.content-area { margin-top: 10rem; min-height: 60vh; }
 
 header, main, footer, .container { padding: 0 1.5rem; }
 
@@ -205,7 +215,7 @@ nav a:hover, a:focus, a:active { color: #999; }
 /* landing styles */
 main { margin-top: 60px; }
 
-.landing { padding-bottom: 2rem; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; text-align: center; }
+.landing { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; text-align: center; }
 
 .landing h1 { margin-bottom: 0.4em; font-weight: 600; }
 
@@ -249,7 +259,7 @@ a:active.button, a:visited.button, a:hover.button { color: white; }
 
 /* End: Recommended Isotope styles */
 /* portfolio styles */
-.container { margin: 2.5rem 0; }
+.container { padding-top: 5rem; padding-bottom: 2rem; }
 
 /* general box styles */
 .box { border-bottom: none; width: 100%; padding: 0.9rem 0; }
@@ -287,9 +297,9 @@ a:hover.filters { color: #999; }
   .content { width: 100%; height: 100%; opacity: 0; -webkit-transition: opacity 0.4s ease-in-out 0.1s; transition: opacity 0.4s ease-in-out 0.1s; }
   .box:hover .content { opacity: 1; }
   .overlay { background: rgba(255, 255, 255, 0.9); position: absolute; height: 100%; width: 100%; left: 0; top: 0; bottom: 0; right: 0; }
-  .box .content-text { position: absolute; bottom: 0; left: 0; padding: 16px 16px 0 16px; padding-left: 1.2em; -webkit-transform: translateY(100%); transform: translateY(100%); -webkit-transition: all 0.3s ease-in-out 0.2s; transition: all 0.3s ease-in-out 0.2s; }
-  .content-text h2 { margin-bottom: 0.8em; padding-left: 0.5rem; padding-bottom: 0.5rem; }
-  .content-text p { font-size: 0.8em; line-height: 1.5em; }
+  .box .content-text { position: absolute; bottom: 0; left: 0; padding: 16px 16px 0 16px; padding-left: 1.2em; -webkit-transform: translateY(100%); transform: translateY(100%); -webkit-transition: all 0.3s ease-in-out 0.3s; transition: all 0.3s ease-in-out 0.3s; }
+  .content-text h2 { margin-bottom: 1.5rem; padding-left: 0.7rem; padding-bottom: 0.5rem; }
+  .content-text p { padding-left: 0.7rem; font-size: 0.8em; line-height: 1.5rem; }
   .box:hover .content-text, .box:focus .content-text { -webkit-transform: translateY(0); transform: translateY(0); } }
 
 .scrollToTop { position: fixed; right: 4.75vw; bottom: 40px; padding: 10px; display: none; border-bottom: none; background-color: white; font-size: 1.5rem; }

@@ -26,7 +26,7 @@
 	</span>
 	<div class="tagline middle">
 		<h1>Hello there,</h1>
-		<p>I'm Mariam: a front-end web developer, designer, and digital content creator with a love for asthetics and delighting the end user.</p>
+		<p>I'm Mariam: a front-end web developer, designer, and digital content creator with a love for asthetics and for delighting the end user.</p>
 	</div>
 <br>
 	<div class="tagline">
@@ -36,6 +36,7 @@
 	</div>
 </section>
 </div><!--background-landing-->
+<!-- <div class="portfolio-link" ></div> -->
 <section class="container" id="portfolio">
 
 	<ul id="filters" class="filters">
@@ -55,6 +56,8 @@
     $args = array(
         'post_type'=> 'project',
         'posts_per_page' => -1,
+				'orderby' => 'menu_order title',
+				'order' => 'ASC'
     );
 
     $projects = new WP_Query($args);?>
@@ -65,6 +68,7 @@
 				<?php $counter = 0; ?>
         <?php while ( $projects->have_posts() ) {
                 $projects->the_post();
+								// $projects->set( 'orderby', 'title' );
 								// $counter++;
 								//
 								// if($counter == 1){
@@ -82,12 +86,12 @@
 										}
         ?>
 				<div>
-				<a href="#0" class="box item <?php echo $termName?>">
+				<a href="<?php the_permalink() ?>" class="box item <?php echo $termName?>">
 						<?php the_post_thumbnail('medium_large'); ?>
 						<div class="content">
 							<div class="overlay"></div>
 							<div class="content-text">
-								<p><?php category_description(); ?></p>
+								<p><?php the_field('project_description'); ?></p>
 								<h2><?php the_title(); ?></h2>
 							</div><!-- content-text -->
 						</div><!-- content -->

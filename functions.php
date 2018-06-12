@@ -151,18 +151,6 @@ function portfolio_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'portfolio_scripts' );
 
-// adding multiple Isotope scripts
-// function add_isotope() {
-//     wp_register_script( 'isotope', get_template_directory_uri().'/js/isotope.js', array('jquery'),  true );
-//     wp_register_script( 'isotope-init', get_template_directory_uri().'/js/isotope-filters.js', array('jquery', 'isotope'),  true );
-//     // wp_register_style( 'isotope-css', get_stylesheet_directory_uri() . '/css/isotope.css' );
-//
-//     wp_enqueue_script('isotope-init');
-//     // wp_enqueue_style('isotope-css');
-// }
-//
-// add_action( 'wp_enqueue_scripts', 'add_isotope' );
-
 /**
  * Implement the Custom Header feature.
  */
@@ -237,7 +225,7 @@ function portfolio_register_custom_post_types() {
         'has_archive'        => true,
         'hierarchical'       => false,
         'menu_position'      => 5,
-        'supports'           => array( 'title', 'thumbnail', 'editor' ),
+        'supports'           => array( 'title', 'thumbnail', 'editor', 'page-attributes' ),
         'menu_icon'          => 'dashicons-format-aside',
     );
     register_post_type( 'project', $args );
@@ -290,3 +278,9 @@ add_action( 'after_switch_theme', 'portfolio_rewrite_flush' );
 // }
 //
 // add_filter( 'wp_calculate_image_srcset', 'portfolio_disable_srcset' );
+
+// Move Yoast to bottom
+function yoasttobottom() {
+	return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
