@@ -140,8 +140,8 @@ function portfolio_scripts() {
 
 	// Isotope Filtering
  	// if(is_post_type_archive('project')){
-			wp_enqueue_script('portfolio-isotopesettings', get_template_directory_uri() . '/js/isotope.pkgd.min.js', array('jquery'), 20180607, false );
-      wp_enqueue_script('portfolio-imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.min.js', array( 'portfolio-isotopesettings' ), '4.1.1', true );
+			wp_enqueue_script('portfolio-imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.js', array( 'jquery' ), '4.1.4', true );
+			wp_enqueue_script('portfolio-isotopesettings', get_template_directory_uri() . '/js/isotope.pkgd.js', array('jquery'), 20180607, false );
 			wp_enqueue_script('portfolio-isotope', get_template_directory_uri() . '/js/isotope-filters.js', array('portfolio-isotopesettings'), 20180518, false );
 	// }
 
