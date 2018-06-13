@@ -68,7 +68,6 @@
 				<?php $counter = 0; ?>
         <?php while ( $projects->have_posts() ) {
                 $projects->the_post();
-								// $projects->set( 'orderby', 'title' );
 								// $counter++;
 								//
 								// if($counter == 1){

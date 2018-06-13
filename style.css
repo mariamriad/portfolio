@@ -302,6 +302,10 @@ a:hover.filters { color: #999; }
   .content-text p { padding-left: 0.7rem; font-size: 0.8em; line-height: 1.5rem; }
   .box:hover .content-text, .box:focus .content-text { -webkit-transform: translateY(0); transform: translateY(0); } }
 
+.post-navigation { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+
+.next-post { -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; }
+
 .scrollToTop { position: fixed; right: 4.75vw; bottom: 40px; padding: 10px; display: none; border-bottom: none; background-color: white; font-size: 1.5rem; }
 
 footer { background-color: #F1F1EF; padding-top: 5rem; padding-bottom: 1rem; }

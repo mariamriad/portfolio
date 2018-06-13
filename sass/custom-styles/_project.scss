@@ -1,0 +1,9 @@
+// post navigation
+.post-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.next-post {
+  justify-content: flex-end;
+}

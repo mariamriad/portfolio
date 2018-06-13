@@ -23,7 +23,49 @@
 			 echo "<a class='cta-button' href='";
 			 the_field('project_link');
 			 echo "'>Visit Live Site</a>";
+
+			 }
+	?>
+
+	<?php
+	// vars
+	$tools = get_field('project_tools');
+
+	// check
+	if( $tools ): ?>
+	<ul>
+		<?php foreach( $tools as $tool ): ?>
+			<li><?php echo $tool; ?></li>
+		<?php endforeach; ?>
+	</ul>
+	<?php endif; ?>
+
+	<?php
+		 if(function_exists('get_field')) {
+			 echo "<p>";
+			 the_field('project_writeup');
+			 echo "</p>";
+
+			 echo "<ul>";
+			 echo "<li style='background-color:" . get_field('color_palette_1') . "'>" . the_field('color_palette_1') . "</li>";
+			 echo "<li style='background-color:" . get_field('color_palette_2') . "'>" . the_field('color_palette_1') . "</li>";
+			 echo "<li style='background-color:" . get_field('color_palette_3') . "'>" . the_field('color_palette_1') . "</li>";
+			 echo "</ul>";
 		 }
+	?>
+
+	<?php
+	if(function_exists('get_field')) {
+			echo wp_get_attachment_image(get_field('project_image_1'), 'medium');
+	}
+
+	if(function_exists('get_field')) {
+			echo wp_get_attachment_image(get_field('project_image_2'), 'medium');
+	}
+
+	if(function_exists('get_field')) {
+			echo wp_get_attachment_image(get_field('project_image_3'), 'medium');
+	}
 	?>
 
 	<div class="entry-content">
