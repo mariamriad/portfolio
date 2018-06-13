@@ -38,7 +38,7 @@
 }
 
 // project info
-.project-details, .project-colors {
+.project-details, .project-colors, .project-images {
   margin-top: 4rem;
 }
 
@@ -56,6 +56,11 @@
   }
 }
 
+.project-images {
+  margin-bottom: 4rem;
+}
+
+// project section styles
 .project-tools {
   min-width: 30%;
   li {
@@ -80,6 +85,11 @@
 .color-block {
   width: 100%;
   min-height: 100px;
+}
+
+.project-images img {
+  width: 100%;
+  padding-bottom: 2rem;
 }
 
 @media only screen and (min-width: 750px) {

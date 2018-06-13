@@ -17,7 +17,7 @@
 		<div class="project-main-text">
 			<?php the_title( '<h2 class="project-title">', '</h2>' ); ?>
 			<?php
-				if(get_field('full_project_description') && get_field('project-link')) {
+				if(get_field('full_project_description') && get_field('project_link')) {
 					 echo "<p>";
 					 the_field('full_project_description');
 					 echo "</p>";
@@ -25,8 +25,7 @@
 					 echo "<a class='cta-button' href='";
 					 the_field('project_link');
 					 echo "'>Visit Live Site</a>";
-
-					 }
+				}
 			?>
 		</div>
 	</div><!-- .post-thumbnail -->
@@ -49,7 +48,7 @@
 	</div>
 
 	<?php
-		 if(function_exists('get_field')) {
+		if(get_field('project_writeup')) {
 			 echo "<div>";
 			 echo "<h3 class='project-writeup'>Project Process</h3>";
 			 echo "<p>";
@@ -62,7 +61,7 @@
 
 <div class="project-colors">
 	<?php
-		 if(function_exists('get_field')) {
+		 if(get_field('color_palette_1') || get_field('color_palette_2') || get_field('color_palette_3')) {
 			 echo "<h3>Color Palette</h3>";
 			 echo "<ul class='colors'>";
 			 	echo "<li>";
@@ -88,15 +87,15 @@
 	<?php
 	if(get_field('project_image_1')) {
 			echo "<h3>Design</h3>";
-			echo wp_get_attachment_image(get_field('project_image_1'), 'medium');
+			echo wp_get_attachment_image(get_field('project_image_1'), 'large');
 	}
 
 	if(function_exists('get_field')) {
-			echo wp_get_attachment_image(get_field('project_image_2'), 'medium');
+			echo wp_get_attachment_image(get_field('project_image_2'), 'large');
 	}
 
 	if(function_exists('get_field')) {
-			echo wp_get_attachment_image(get_field('project_image_3'), 'medium');
+			echo wp_get_attachment_image(get_field('project_image_3'), 'large');
 	}
 	?>
 </div>

@@ -314,12 +314,14 @@ a:hover.filters { color: #999; }
 
 .project-main-text { position: absolute; background-color: #F1F1EF; top: 40%; -webkit-transform: translateY(-25%); transform: translateY(-25%); max-width: 475px; padding: 2rem; text-align: left; }
 
-.project-details, .project-colors { margin-top: 4rem; }
+.project-details, .project-colors, .project-images { margin-top: 4rem; }
 
 .project-writeup { margin-top: 4rem; }
 
 @media only screen and (min-width: 750px) { .project-details { display: -webkit-box; display: -ms-flexbox; display: flex; }
   .project-writeup { margin-top: 0; } }
+
+.project-images { margin-bottom: 4rem; }
 
 .project-tools { min-width: 30%; }
 
@@ -330,6 +332,8 @@ a:hover.filters { color: #999; }
 .project-colors li:first-child { padding-top: 0; }
 
 .color-block { width: 100%; min-height: 100px; }
+
+.project-images img { width: 100%; padding-bottom: 2rem; }
 
 @media only screen and (min-width: 750px) { .colors { display: -webkit-box; display: -ms-flexbox; display: flex; }
   .project-colors li { padding: 0; padding-right: 2rem; }
