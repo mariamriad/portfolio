@@ -26,7 +26,7 @@
 	</span>
 	<div class="tagline middle">
 		<h1>Hello there,</h1>
-		<p>I'm Mariam: a front-end web developer, designer, and digital content creator with a love for asthetics and for delighting the end user.</p>
+		<p>I'm Mariam: a front-end web developer, designer, and digital content creator with a love for asethetics and for delighting the end user.</p>
 	</div>
 <br>
 	<div class="tagline">

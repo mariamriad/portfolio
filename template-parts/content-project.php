@@ -8,54 +8,86 @@
  */
 
 ?>
+<?php if(function_exists('get_field')): ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	<?php portfolio_post_thumbnail(); ?>
-	<?php
-		 if(function_exists('get_field')) {
+	<div class="project-main">
+		<?php the_post_thumbnail('large', array('class' => 'project-main-image')); ?>
+		<div class="project-main-text">
+			<?php the_title( '<h2 class="project-title">', '</h2>' ); ?>
+			<?php
+				if(get_field('full_project_description') && get_field('project-link')) {
+					 echo "<p>";
+					 the_field('full_project_description');
+					 echo "</p>";
 
-			 echo "<p>";
-			 the_field('full_project_description');
-			 echo "</p>";
+					 echo "<a class='cta-button' href='";
+					 the_field('project_link');
+					 echo "'>Visit Live Site</a>";
 
-			 echo "<a class='cta-button' href='";
-			 the_field('project_link');
-			 echo "'>Visit Live Site</a>";
+					 }
+			?>
+		</div>
+	</div><!-- .post-thumbnail -->
 
-			 }
-	?>
-
+<div class="project-details">
+	<div class="project-tools">
 	<?php
 	// vars
 	$tools = get_field('project_tools');
 
 	// check
 	if( $tools ): ?>
+	<h3>Project Tools</h3>
 	<ul>
 		<?php foreach( $tools as $tool ): ?>
 			<li><?php echo $tool; ?></li>
 		<?php endforeach; ?>
 	</ul>
 	<?php endif; ?>
+	</div>
 
 	<?php
 		 if(function_exists('get_field')) {
+			 echo "<div>";
+			 echo "<h3 class='project-writeup'>Project Process</h3>";
 			 echo "<p>";
 			 the_field('project_writeup');
 			 echo "</p>";
+			 echo "</div>";
+		 }
+	?>
+</div>
 
-			 echo "<ul>";
-			 echo "<li style='background-color:" . get_field('color_palette_1') . "'>" . the_field('color_palette_1') . "</li>";
-			 echo "<li style='background-color:" . get_field('color_palette_2') . "'>" . the_field('color_palette_1') . "</li>";
-			 echo "<li style='background-color:" . get_field('color_palette_3') . "'>" . the_field('color_palette_1') . "</li>";
+<div class="project-colors">
+	<?php
+		 if(function_exists('get_field')) {
+			 echo "<h3>Color Palette</h3>";
+			 echo "<ul class='colors'>";
+			 	echo "<li>";
+					echo "<p>" . the_field('color_palette_1') . "</p>";
+			 		echo "<div class='color-block' style='background-color:" . get_field('color_palette_1') . "'></div>";
+				echo "</li>";
+
+				echo "<li>";
+					echo "<p>" . the_field('color_palette_2') . "</p>";
+					echo "<div class='color-block' style='background-color:" . get_field('color_palette_2') . "'></div>";
+				echo "</li>";
+
+				echo "<li>";
+					echo "<p>" . the_field('color_palette_3') . "</p>";
+					echo "<div class='color-block' style='background-color:" . get_field('color_palette_3') . "'></div>";
+				echo "</li>";
 			 echo "</ul>";
 		 }
 	?>
+</div>
 
+<div class="project-images">
 	<?php
-	if(function_exists('get_field')) {
+	if(get_field('project_image_1')) {
+			echo "<h3>Design</h3>";
 			echo wp_get_attachment_image(get_field('project_image_1'), 'medium');
 	}
 
@@ -67,6 +99,7 @@
 			echo wp_get_attachment_image(get_field('project_image_3'), 'medium');
 	}
 	?>
+</div>
 
 	<div class="entry-content">
 		<?php
@@ -102,3 +135,5 @@
 		</div><!-- .entry-footer -->
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->
+
+<?php endif; ?>
