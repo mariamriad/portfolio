@@ -95,10 +95,10 @@
 							</div><!-- content-text -->
 						</div><!-- content -->
 				</a>
-
+				</div>
         <?php }  ?>
-				<!-- </div> -->
-        </div> <!-- end item-list -->
+
+			</div> <!-- end portfolio -->
 	<?php endif; ?>
 
 

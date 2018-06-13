@@ -78,7 +78,12 @@
 					echo "<p>" . the_field('color_palette_3') . "</p>";
 					echo "<div class='color-block' style='background-color:" . get_field('color_palette_3') . "'></div>";
 				echo "</li>";
-			 echo "</ul>";
+
+			 echo "<li>";
+				 echo "<p>" . the_field('color_palette_4') . "</p>";
+				 echo "<div class='color-block' style='background-color:" . get_field('color_palette_4') . "'></div>";
+			 echo "</li>";
+			echo "</ul>";
 		 }
 	?>
 </div>
