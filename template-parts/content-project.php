@@ -13,11 +13,11 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="project-main">
-		<?php the_post_thumbnail('large', array('class' => 'project-main-image')); ?>
+		<?php the_post_thumbnail('full', array('class' => 'project-main-image')); ?>
 		<div class="project-main-text">
 			<?php the_title( '<h2 class="project-title">', '</h2>' ); ?>
 			<?php
-				if(get_field('full_project_description') && get_field('project_link')) {
+				if(get_field('full_project_description') || get_field('project_link')) {
 					 echo "<p>";
 					 the_field('full_project_description');
 					 echo "</p>";
@@ -61,7 +61,7 @@
 
 <div class="project-colors">
 	<?php
-		 if(get_field('color_palette_1') || get_field('color_palette_2') || get_field('color_palette_3')) {
+		 if(get_field('color_palette_1') || get_field('color_palette_2') || get_field('color_palette_3') || get_field('color_palette_4')) {
 			 echo "<h3>Color Palette</h3>";
 			 echo "<ul class='colors'>";
 			 	echo "<li>";
@@ -92,7 +92,7 @@
 	<?php
 	if(get_field('project_image_1')) {
 			echo "<h3>Design</h3>";
-			echo wp_get_attachment_image(get_field('project_image_1'), 'large');
+			echo wp_get_attachment_image(get_field('project_image_1'), 'full');
 	}
 
 	if(function_exists('get_field')) {
