@@ -14,8 +14,7 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	<!-- </header> -->
 
-	<?php portfolio_post_thumbnail(); ?>
-
+<div class="page-layout">
 	<div class="entry-content">
 		<?php
 		the_content();
@@ -26,6 +25,9 @@
 		) );
 		?>
 	</div><!-- .entry-content -->
+
+	<?php portfolio_post_thumbnail(); ?>
+</div>
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">

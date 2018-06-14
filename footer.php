@@ -19,17 +19,17 @@
 	  </article> -->
 		<div class="social">
 			<ul>
-				<li><a href="#0">
+				<li><a href="https://twitter.com/mariamriad" target="_blank">
 							<i class="fab fa-twitter"></i>
 							<span class="sr-only">Twitter: Mariam Riad</span>
 						</a>
 				</li>
-				<li><a href="#0">
+				<li><a href="https://www.linkedin.com/in/mariamriad/" target="_blank">
 							<i class="fab fa-linkedin-in"></i>
 							<span class="sr-only">Linkedin: Mariam Riad</span>
 						</a>
 				</li>
-				<li><a href="#0">
+				<li><a href="https://github.com/mariamriad" target="_blank">
 							<i class="fab fa-github"></i>
 							<span class="sr-only">Github: Mariam Riad</span>
 						</a>

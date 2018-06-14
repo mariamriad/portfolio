@@ -74,3 +74,19 @@ $background-gray: #F1F1EF;
 
 // layout variables
 $header-height: 60px;
+
+// general page layout
+.entry-content {
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 800px) {
+  .page-layout {
+    display: flex;
+  }
+
+  .entry-content {
+    max-width: 68%;
+    padding-right: 4rem;
+  }
+}
