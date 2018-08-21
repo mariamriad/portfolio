@@ -13,12 +13,12 @@ img {
   height: auto;
 }
 
-body {
-  max-width: 1920px;
-}
+// main {
+//   max-width: 1920px;
+// }
 
 .content-area {
-  margin-top: 10rem;
+  margin-top: 7rem;
 	min-height: 60vh;
 }
 
@@ -30,6 +30,9 @@ header, main, footer, .container {
 	header, main, footer, .container {
 		padding: 0 4rem;
 	}
+  main {
+    margin-bottom: 5rem;
+  }
 }
 
 @media only screen and (min-width: 1600px) {
@@ -54,6 +57,26 @@ ul {
   padding: 0;
 }
 
+.entry-title {
+  padding-top: 2rem;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  padding-bottom: 2rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+input, textarea {
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 0;
+}
+
 /* screen readers/accessibility */
 .sr-only {
 position: absolute;
@@ -67,13 +90,14 @@ border: 0;
 }
 
 /* variables */
-$pink: #f1576e;
-$brand-color: #1bcfe0;
+// $pink: #f1576e;
+// $brand-color: #1bcfe0;
+$brand-color: #eb163d;
 $hover-gray: #999;
 $background-gray: #F1F1EF;
 
 // layout variables
-$header-height: 60px;
+$header-height: 70px;
 
 // general page layout
 .entry-content {
@@ -86,7 +110,53 @@ $header-height: 60px;
   }
 
   .entry-content {
-    max-width: 68%;
+    // width: 60%;
     padding-right: 4rem;
   }
+
+  // contact page
+  .contact-wrapper {
+    display: flex;
+  }
+
+  form {
+    width: 400px;
+    margin-right: 4rem;
+  }
+
+  .contact-info {
+    padding-left: 2rem;
+  }
+
+  .contact-info h2 {
+    font-size: 1.7rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .contact-social ul {
+    list-style: none;
+    display: flex;
+  }
+
+  .contact-social li {
+    padding-left: 0;
+    padding-right: 1rem;
+  }
+
+  .contact-social a {
+    border-bottom: none;
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 799px) {
+  .contact-info {
+    display: none;
+  }
+}
+
+// about pages
+.post-thumbnail img {
+  border-radius: 50%;
 }

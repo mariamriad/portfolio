@@ -1,8 +1,21 @@
 /* portfolio styles */
+.portfolio-title {
+  font-size: 1.7rem;
+  padding-top: 7rem;
+  padding-left: 4rem;
+}
+
 .container {
-  padding-top: 5rem;
+  padding-top: 0.5rem;
   padding-bottom: 2rem;
+  padding-left: 4rem;
   // margin: 2.5rem 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .container, .portfolio-title {
+    padding-left: 2rem;
+  }
 }
 
 // a.container {
@@ -17,6 +30,7 @@
   border-bottom: none;
   width: 100%;
   padding: 0.9rem 0;
+  // padding: 0.9rem 0 1rem 2.1rem;
 
   img {
     width: 100%;
@@ -26,7 +40,9 @@
 @media only screen and (min-width: 1100px) {
   .box {
     width: 50%;
-    padding: 0.9rem 1.1rem;
+    padding: 0.9rem 0 1rem 2.1rem;
+    // padding: 0.9rem 1.1rem;
+    // padding: 1rem
   }
 }
 
@@ -64,23 +80,24 @@
   min-width: 320px;
 }
 
-@media only screen and (min-width: 925px) {
+@media only screen and (min-width: 960px) {
   .filters {
-        padding-top: 0.5rem;
+    padding-top: 0.5rem;
   }
 
   li {
-    padding-left: 0.5rem;
+    padding-left: 0.1rem;
   }
 }
 
 .filters a {
   color: black;
   text-transform: uppercase;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   line-height: 2rem;
-  letter-spacing: 0.02rem;
+  letter-spacing: 0.05rem;
   border-bottom: none;
+  font-weight: bold;
 }
 
 .filters a:hover {
@@ -92,7 +109,7 @@ a:hover.filters {
 }
 
 /* grid styles */
-@media only screen and (min-width: 925px) {
+@media only screen and (min-width: 960px) {
   // filters / container grid
   .container {
     display: grid;
@@ -143,9 +160,10 @@ a:hover.filters {
     bottom: 0;
     left: 0;
     padding: 16px 16px 0 16px;
-    padding-left: 1.2em;
+    padding-left: 0.9rem;
+    padding-bottom: 0.5rem;
     transform: translateY(100%);
-    transition: all 0.3s ease-in-out 0.3s;
+    transition: all 0.2s ease-in-out 0.5s;
   }
 
   .content-text h2 {
@@ -156,12 +174,21 @@ a:hover.filters {
 
   .content-text p {
     padding-left: 0.7rem;
-    font-size: 0.8em;
+    font-size: 0.9rem;
     line-height: 1.5rem;
   }
 
   .box:hover .content-text,
   .box:focus .content-text {
     transform: translateY(0);
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .content-text h2 {
+    padding-left: 2.5rem;
+  }
+  .content-text p {
+    padding-left: 2.5rem;
   }
 }

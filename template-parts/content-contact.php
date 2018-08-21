@@ -15,7 +15,7 @@
 		<p class="subtitle"><?php the_field('subtitle'); ?></p>
 	<!-- </header> -->
 
-<div class="page-layout">
+<div class="page-layout contact-wrapper">
 	<div class="entry-content">
 		<?php
 		the_content();
@@ -26,6 +26,35 @@
 		) );
 		?>
 	</div><!-- .entry-content -->
+
+	<div class="contact-info">
+		<div class="contact-email">
+			<h2>Email</h2>
+			<a href="mailto:hello@mariamriad.com">hello@mariamriad.com</a>
+		</div>
+
+		<br>
+		<div class="contact-social">
+			<h2>Follow me</h2>
+			<ul>
+				<li><a href="https://twitter.com/mariamriad" target="_blank">
+							<i class="fab fa-twitter"></i>
+							<span class="sr-only">Twitter: Mariam Riad</span>
+						</a>
+				</li>
+				<li><a href="https://www.linkedin.com/in/mariamriad/" target="_blank">
+							<i class="fab fa-linkedin-in"></i>
+							<span class="sr-only">Linkedin: Mariam Riad</span>
+						</a>
+				</li>
+				<li><a href="https://github.com/mariamriad" target="_blank">
+							<i class="fab fa-github"></i>
+							<span class="sr-only">Github: Mariam Riad</span>
+						</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 
 	<?php portfolio_post_thumbnail(); ?>
 </div>

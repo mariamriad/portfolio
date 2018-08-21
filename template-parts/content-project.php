@@ -22,7 +22,9 @@
 					 the_field('full_project_description');
 					 echo "</p>";
 
-					 echo "<a class='cta-button' href='";
+					 echo "<br>";
+
+					 echo "<a class='custom-button' target='_blank' href='";
 					 the_field('project_link');
 					 echo "'>Visit Live Site</a>";
 				}

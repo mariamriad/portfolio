@@ -122,21 +122,18 @@ add_action( 'widgets_init', 'portfolio_widgets_init' );
 function portfolio_scripts() {
 	wp_enqueue_style('portfolio-style', get_stylesheet_uri());
 
-	wp_enqueue_script('portfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true);
+	wp_enqueue_script('portfolio-navigation', get_template_directory_uri() . '/js/js-min/navigation.min.js', array(), '20151215', true);
 
-	wp_enqueue_script('portfolio-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true);
+	wp_enqueue_script('portfolio-skip-link-focus-fix', get_template_directory_uri() . '/js/js-min/skip-link-focus-fix.min.js', array(), '20151215', true);
 
 	// Google Fonts
-	wp_enqueue_style('portfolio-googlefonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,600,800,900');
+	wp_enqueue_style('portfolio-googlefonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900');
 
 	// Font Awesome
 	wp_enqueue_script('portfolio-fontawesomejs', get_template_directory_uri() . '/fonts/fontawesome/js/fontawesome-all.min.js', array(), '20180522', true);
 
 	// ScrollTop
-	wp_enqueue_script('portfolio-scrolltopjs', get_template_directory_uri() . '/js/scroll-top.js', array('jquery'), '20180430', true);
-
-	// Navbar
-	// wp_enqueue_script('portfolio-navbarjs', get_template_directory_uri() . '/js/navbar.js', array('jquery'), '20180527', true);
+	wp_enqueue_script('portfolio-scrolltopjs', get_template_directory_uri() . '/js/js-min/scroll-top.min.js', array('jquery'), '20180430', true);
 
 	// Isotope Filtering
  	// if(is_post_type_archive('project')){
@@ -273,14 +270,29 @@ function portfolio_register_taxonomies() {
 }
 add_action( 'after_switch_theme', 'portfolio_rewrite_flush' );
 
-// function portfolio_disable_srcset( $sources ) {
-//     return false;
-// }
-//
-// add_filter( 'wp_calculate_image_srcset', 'portfolio_disable_srcset' );
-
 // Move Yoast to bottom
 function yoasttobottom() {
 	return 'low';
 }
 add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
+
+// SVG Image Support
+function add_file_types_to_uploads($file_types){
+    $new_filetypes = array();
+    $new_filetypes['svg'] = 'image/svg+xml';
+    $file_types = array_merge($file_types, $new_filetypes );
+    return $file_types;
+    }
+add_action('upload_mimes', 'add_file_types_to_uploads');
+
+// Change login page logo
+function my_login_logo_one() {
+?>
+<style type="text/css">
+body.login div#login h1 a {
+background-image: url(/wp-content/themes/portfolio/assets/mariamriad-logo-black.svg);  //Add your own logo image in this url
+padding-bottom: 30px;
+}
+</style>
+<?php
+} add_action( 'login_enqueue_scripts', 'my_login_logo_one' );

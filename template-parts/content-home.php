@@ -10,7 +10,7 @@
 ?>
 
 <section class="landing">
-	<span>
+	<!-- <span>
 		<svg class="heart-logo tagline start" x="0px" y="0px" viewBox="0 0 304 232.8" style="enable-background:new 0 0 304 232.8;">
 		<style type="text/css">
 			.st0{/*fill:#FFFFFF;*//*stroke:#FFFFFF;*/stroke-miterlimit:10;}
@@ -23,22 +23,23 @@
 			<path class="st1" d="M21,82.1c0,56.8,14.2,102.7,31.6,102.7"/>
 		</g>
 		</svg>
-	</span>
-	<div class="tagline middle">
-		<h1>Hello there,</h1>
-		<p>I'm Mariam: a front-end web developer, designer, and digital content creator with a love for asethetics and for delighting the end user.</p>
+	</span> -->
+	<div class="tagline">
+		<h1 class="tagline start">Hello there,</h1>
+		<p class="tagline middle"><strong>I'm Mariam:</strong> a front-end web developer, UX/UI designer, and digital content creator with a passion for building effective digital solutions.</p>
 	</div>
 <br>
 	<div class="tagline">
-		<span><a href="./contact" class="tagline finish">Get in touch</a></span>
+		<span><a href="./contact" class="tagline finish custom-button">Get in touch</a></span>
 	</div>
 	<div class="bottom-landing-section">
 	</div>
 </section>
 </div><!--background-landing-->
 <!-- <div class="portfolio-link" ></div> -->
-<section class="container" id="portfolio">
-
+<section id="portfolio">
+	<h1 class="portfolio-title">Portfolio</h1>
+	<div class="container">
 	<ul id="filters" class="filters">
 			<li><a href="javascript:void(0)" data-filter="*" class="selected">All</a></li>
 			<?php
@@ -100,6 +101,22 @@
 
 			</div> <!-- end portfolio -->
 	<?php endif; ?>
-
-
+	</div><!-- container -->
+</section>
+<section class="technical-skills">
+	<h1>Technical Skills</h1>
+	<div class="skills-wrapper">
+			<div class="webdev-skills">
+				<h2>Web Development</h2>
+				<p>HTML, CSS, Sass, PHP, WordPress custom theme development, Gulp, Git, JavaScript, jQuery, Angular, Vue</p>
+			</div>
+			<div class="design-skills">
+				<h2>Design</h2>
+				<p>UX/UI design, design briefs, UX planning (user personas, scenarios, journeys), wireframes, mockups, prototypes, Adobe Creative Suite: Adobe XD, Illustrator, Photoshop + InDesign, Sketch, InVision, UX testing</p>
+			</div>
+			<div class="digitalmarketing-skills">
+				<h2>Digital Marketing</h2>
+				<p>Copywriting, SEO, Google Analytics, MailChimp, email marketing, and content production for social media platforms including Instagram, Facebook + Twitter</p>
+			</div>
+	</div>
 </section>

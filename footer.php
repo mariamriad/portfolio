@@ -41,7 +41,7 @@
 	    <a href="mailto:hello@mariamriad.com">hello@mariamriad.com</a>
 	  </div>
 	  <div class="made">
-	    <p>Made with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i></p>
+	    <p>Made with <i class="fas fa-coffee"></i> in Vancouver, BC, Canada.</p>
 			<!-- <img src="/portfolio/wp-content/themes/portfolio/assets/mariamriad-logo-black.svg"> -->
 	    <p>&copy; <?php echo date('Y'); ?> Mariam Riad.</p>
 	  </div>

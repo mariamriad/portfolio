@@ -10,12 +10,10 @@
 }
 
 footer {
-    background-color: $background-gray;
-    // margin-top: 5vw;
-    // padding: 5vw 5vw 1vw 5vw;
+    // background-color: $background-gray;
+    // border-top: 1px solid black;
     padding-top: 5rem;
     padding-bottom: 1rem;
-    // border-top: 1px solid black;
 }
 
 // .mariam {
@@ -61,14 +59,16 @@ footer a {
 }
 
 .made {
-  font-size: 0.9em;
   line-height: 0.5em;
   margin-bottom: 5vh;
+  p {
+    font-size: 0.8rem;
+  }
 }
 
 @media only screen and (min-width: 700px) {
   footer {
-    padding-top: 3rem;
+    padding-top: 4rem;
   }
   footer h2 {
     font-size: 1.7rem;

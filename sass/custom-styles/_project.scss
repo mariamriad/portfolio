@@ -29,7 +29,9 @@
 
 .project-main-text {
   position: absolute;
-  background-color: $background-gray;
+  // background-color: $background-gray;
+  background-color: #fff;
+  // box-shadow: -2px 2px 4px 0 #ccc;
   top: 40%;
   transform: translateY(-25%);
   max-width: 475px;

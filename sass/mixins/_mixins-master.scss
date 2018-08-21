@@ -27,3 +27,21 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+// Custom button styles
+@mixin custom-button(){
+	background-color: #eb163d;
+	color: #fff;
+	border-radius: 25px;
+	border: 2px solid #eb163d;
+	padding: 0.8rem 1.2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 0.75rem;
+	letter-spacing: 0.1rem;
+		&:hover, &:active, &:visited, &:focus {
+			background-color: #e44a66;
+			border: 2px solid #e44a66;
+			color: #fff;
+		}
+}
